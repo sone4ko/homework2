@@ -3,3 +3,12 @@ require 'vendor/autoload.php';
 
 use Carbon\Carbon;
 printf("Now: %s", Carbon::now());
+
+
+<?php 
+require 'vendor/autoload.php'; 
+use \Michelf\Markdown; 
+echo Markdown::defaultTransform(file_get_contents("php://stdin"));
+
+use Carbon\Carbon;
+printf("Now: %s", Carbon::now());
