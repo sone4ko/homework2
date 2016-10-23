@@ -1,7 +1,9 @@
 <?php 
 require 'vendor/autoload.php'; 
-use \Michelf\Markdown; 
-echo Markdown::defaultTransform(file_get_contents("php://stdin"));
+
+$smarty = new Smarty();
+	$smarty->assign('to', 'world');
+	echo $smarty->fetch('www.tpl');
 
 use Carbon\Carbon;
 printf("Now: %s", Carbon::now());
