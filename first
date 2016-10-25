@@ -1,1 +1,9 @@
-Holisjgv
+<?php 
+require 'vendor/autoload.php'; 
+
+$smarty = new Smarty();
+	$smarty->assign('to', 'world');
+	echo $smarty->fetch('www.tpl');
+
+use Carbon\Carbon;
+printf("Now: %s", Carbon::now());
